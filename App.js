@@ -213,3 +213,13 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
   },
 });
+
+// NESTED TERNARY OPERATOR: {result === "tie" ? "It's a tie!" : result === "player" ? "You win!" : "Computer wins!"}
+// it is same as below...
+// if (result === "tie") {
+//   return "It's a tie!";
+// } else if (result === "player") {
+//   return "You win!";
+// } else {
+//   return "Computer wins!";
+// }
