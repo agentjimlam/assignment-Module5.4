@@ -9,7 +9,8 @@ Tried the expo pedometer tutorial: https://docs.expo.dev/versions/latest/sdk/ped
 - Used Samsung and Xiaomi phones, both not successful
 
 ### Video.js
-Used the Expo Video (expo-av) tutorial. Installed `react-native-webview` to use <Webview> to embed a youtube video. Have not tried to show a video using MediaLibrary yet.
+Used the Expo Video (expo-av) tutorial: https://docs.expo.dev/versions/latest/sdk/video-av/
+- Installed `react-native-webview` to use <Webview> to embed a youtube video. Have not tried to show a video using MediaLibrary yet.
 
 ### Extra for Rock Paper Scissor
 
