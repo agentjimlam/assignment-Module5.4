@@ -8,7 +8,7 @@ const emojis = {
   rock: "✊",
   paper: "✋",
   scissors: "✌️",
-};
+}; // check out https://emojipedia.org/raised-hand#designs for ✋ (closed fingers raised hand)
 
 const getWinner = (playerChoice, computerChoice) => {
   if (playerChoice === computerChoice) return "tie";
@@ -66,6 +66,7 @@ export default function App() {
         </View>
       </View>
 
+{/* if no playerChoice made is true, it will show the 3 choices using Array.map() method, else if false playerChoice has been made, it will show player's and computer's choice */}
       {!playerChoice ? (
         <View style={styles.choicesContainer}>
           {choices.map((choice) => (
@@ -115,7 +116,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#1a1a2e", // dark blue background #c5ccde #1a1a2e
+    backgroundColor: "#f5f5f7", // very dark blue (darker) background #c5ccde #1a1a2e
     alignItems: "center",
     justifyContent: "center",
     padding: 20,
@@ -123,7 +124,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 32,
     fontWeight: "bold",
-    color: "#fff",
+    color: "#1c1c1e", // #fff white color title -> "Rock Paper Scissors"
     marginBottom: 40,
   },
   scoreContainer: {
@@ -134,18 +135,28 @@ const styles = StyleSheet.create({
   },
   scoreBox: {
     alignItems: "center",
-    backgroundColor: "#16213e",
+    flexDirection: "column", 
+    backgroundColor: "#ffffff", // Very dark blue box #16213e
     padding: 20,
     borderRadius: 15,
     minWidth: 120,
+    shadowColor: '#000', // https://reactnative.dev/docs/shadow-props
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.05,
+    shadowRadius: 8,
+    elevation: 10,
   },
   scoreLabel: {
-    color: "#e94560",
+    color: "#86868b", // #e94560 bright red, for labels "You" and "Computer"
     fontSize: 18,
     marginBottom: 5,
+    fontWeight: 'bold',
   },
   scoreValue: {
-    color: "#fff",
+    color: "#1c1c1e", // #fff white color
     fontSize: 24,
     fontWeight: "bold",
   },
@@ -153,10 +164,10 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-around",
     width: "100%",
-    flexWrap: "wrap",
+    flexWrap: "wrap", // https://reactnative.dev/docs/flexbox
   },
   choiceButton: {
-    backgroundColor: "#16213e",
+    backgroundColor: "#16213e", // #16213e Very dark blue
     padding: 20,
     borderRadius: 15,
     alignItems: "center",
@@ -168,9 +179,10 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   choiceText: {
-    color: "#fff",
+    color: "#fff", // white color
     fontSize: 16,
     textTransform: "capitalize",
+    fontWeight: 'bold',
   },
   resultContainer: {
     alignItems: "center",
@@ -190,25 +202,25 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   vs: {
-    color: "#e94560",
+    color: "#1c1c1e", // #e94560 Bright red
     fontSize: 24,
     fontWeight: "bold",
     marginHorizontal: 20,
   },
   result: {
-    color: "#fff",
+    color: "#1c1c1e", // #fff white color
     fontSize: 24,
     fontWeight: "bold",
     marginBottom: 30,
   },
   playAgainButton: {
-    backgroundColor: "#e94560",
+    backgroundColor: "#e94560", // Bright red
     paddingHorizontal: 30,
     paddingVertical: 15,
     borderRadius: 25,
   },
   playAgainText: {
-    color: "#fff",
+    color: "#fff", // white color
     fontSize: 18,
     fontWeight: "bold",
   },
